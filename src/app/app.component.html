@@ -1,0 +1,400 @@
+<div>
+  <!-- Header  -->
+  <div class="w-full flex flex-row justify-between px-34 py-10 shadow-header sticky bg-white z-50 top-0">
+    <img class="h-[80%] my-auto" src="../assets/images/logo.PNG" alt="logo of company" />
+    <div class="h-[50%] my-auto group rounded-md flex items-center">
+      <div class="flex text-7 gap-5 pr-10 border-r border-blue items-center">
+        <img class="h-6" src="../assets/images/gb-flag.png" alt="Great Britain Flag">
+        <p>ENG</p>
+      </div>
+      <div class="flex text-7 gap-5 pl-10 border-blue">
+        <div class="flex gap-10">
+          <div class="w-20 h-20 bg-grayLight rounded-full flex justify-center items-center relative">
+            <div class="w-5 h-5 bg-pink rounded-full absolute -top-0.5 right-1"></div>
+            <img class="h-10" src="../assets/images/bell.svg" alt="Great Britain Flag">
+          </div>
+          <div class="w-20 h-20 bg-grayLight rounded-full flex justify-center items-center">
+            <img class="h-10" src="../assets/images/black-male-user-symbol.svg" alt="Great Britain Flag">
+          </div>
+        </div>
+        <div class="flex gap-5 items-center">
+          <p>მარიამ</p>
+          <img class="w-4 rotate-180" src="../assets/images/plain-triangle.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Round Buttons -->
+  <div class="max-w-[65%] h-10 mx-auto my-12 flex flex-row justify-center">
+    <div class="w-full flex items-center justify-around">
+      <div *ngFor="
+        let num of numbers;
+        let i = index;
+        let isFirst = first;
+        let isLast = last
+      " class="flex items-center w-full" [ngClass]="isLast ? 'justify-start' : 'justify-center'">
+        <div class="border-b w-full" [ngClass]="isFirst ? 'border-paleGreen' : 'border-paleBg'" *NgIf="!isFirst"></div>
+        <div class="w-14 h-14 rounded-full flex shrink-0 justify-center items-center mx-1"
+          [ngClass]="num.isSelected ? 'bg-pinkCustom ' : 'bg-numBg'">
+          <p class="text-xs font-bold" [ngClass]="num.isSelected ? 'text-white ' : 'text-textColor'">
+            {{ i + 1 }}
+          </p>
+        </div>
+        <div class="border-b border-paleBg w-1/2" *ngIf="!isLast"></div>
+      </div>
+    </div>
+  </div>
+  <!-- Main Content Here -->
+  <div class="mx-auto flex flex-col">
+    <h1 class="text-textColor text-13 text-base mx-auto md:text-xl font-bold tracking-tight mb-16">
+      ᲐᲘᲠᲩᲘᲔ ᲡᲐᲡᲣᲠᲕᲔᲚᲘ ᲓᲠᲝ
+    </h1>
+    <!-- Calendar Component -->
+    <div class="bg-grayCalendar">
+      <div class="max-w-[65%] mx-auto flex items-center justify-between">
+        <button class="flex gap-4 px-8 py-6 border rounded-6 items-center">
+          <img src="../assets/images/calendar-cursor.svg" alt="Calendar">
+          <span>დღეს - 23 ივლ</span>
+        </button>
+        <!-- Calendar SLider -->
+        <div>
+          <div id="carouselExampleControls" class="carousel slide max-w-max pt-8 pb-11" data-interval="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="flex gap-10">
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>23 ივლ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>24 ივლ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>25 ივლ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>26 ივლ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>27 ივლ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>28 ივლ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>29 ივლ</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="flex gap-10">
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>30 ივლ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>31 ივლ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>1 აგვ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>2 აგვ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>3 აგვ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>4 აგვ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>5 აგვ</p>
+                  </div>
+                </div>
+
+              </div>
+              <div class="carousel-item">
+                <div class="flex gap-10">
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>6 აგვ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>7 აგვ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>8 აგვ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>9 აგვ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>10 აგვ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>11 აგვ</p>
+                  </div>
+                  <div class="flex flex-col items-center border border-calBorder w-41 h-39 justify-center rounded-7">
+                    <p>ოთხ</p>
+                    <p>12 აგვ</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <a class="carousel-control-prev w-23 h-23 border custom-arrow--left rounded-6"
+              href="#carouselExampleControls" role="button" data-slide="prev">
+              <img src="../assets/images/chevron-right.svg" alt="Arrow left">
+            </a>
+            <a class="carousel-control-next w-23 h-23 border custom-arrow--right rounded-6"
+              href="#carouselExampleControls" role="button" data-slide="next">
+              <img class="rotate-180" src="../assets/images/chevron-right.svg" alt="Arrow rigth">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selectors -->
+    <div class="w-[65%] mx-auto flex justify-between pt-16">
+      <select-overview-example></select-overview-example>
+      <select-overview-example></select-overview-example>
+      <select-overview-example></select-overview-example>
+      <select-overview-example></select-overview-example>
+    </div>
+
+    <!-- Doctor cards -->
+    <div class="w-[65%] mx-auto mb-10">
+      <div class="w-full rounded-tr-6 rounded-tl-6 border border-calBorder px-16 pt-12 relative">
+        <div [ngClass]="true ? 'max-h-max' : 'max-h-150'" class="overflow-hidden">
+          <div class="flex gap-12 pb-4 border-b border-calBorder border-dashed">
+            <div>
+              <img class="w-36 h-36 rounded-full" src="../assets/images/user-2.jpg" alt="User-2">
+            </div>
+            <div>
+              <div class="flex gap-8 text-7">
+                <p class="text-doctorName underline">ნინო ოქროპირძე</p>
+                <p class="text-pinkCustom">ოტორინოლარინგოლოგი</p>
+              </div>
+              <div class="flex gap-6 items-center">
+                <div>
+                  <img src="../assets/images/office-building-marker.svg" alt="office-building-icon">
+                </div>
+                <div class="flex flex-col gap-1 text-address text-7">
+                  <span>მედალფა - შპს აკადემიკოს ვახტანგ ბოჭორიშვილის კლინიკა</span>
+                  <span>16 ალექსანდრე ყაზბეგის გამზირი</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 hours-wrapper pb-4 border-b border-calBorder border-dashed mb-4">
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+          </div>
+          <div class="flex gap-12 pb-4 border-b border-calBorder border-dashed">
+            <div>
+              <img class="w-36 h-36 rounded-full" src="../assets/images/user-2.jpg" alt="User-2">
+            </div>
+            <div>
+              <div class="flex gap-8 text-7">
+                <p class="text-doctorName underline">ნინო ოქროპირძე</p>
+                <p class="text-pinkCustom">ოტორინოლარინგოლოგი</p>
+              </div>
+              <div class="flex gap-6 items-center">
+                <div>
+                  <img src="../assets/images/office-building-marker.svg" alt="office-building-icon">
+                </div>
+                <div class="flex flex-col gap-1 text-address text-7">
+                  <span>მედალფა - შპს აკადემიკოს ვახტანგ ბოჭორიშვილის კლინიკა</span>
+                  <span>16 ალექსანდრე ყაზბეგის გამზირი</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 hours-wrapper pb-4 border-b border-calBorder border-dashed mb-4">
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+          </div>
+          <div class="flex gap-12 pb-4 border-b border-calBorder border-dashed">
+            <div>
+              <img class="w-36 h-36 rounded-full" src="../assets/images/user-2.jpg" alt="User-2">
+            </div>
+            <div>
+              <div class="flex gap-8 text-7">
+                <p class="text-doctorName underline">ნინო ოქროპირძე</p>
+                <p class="text-pinkCustom">ოტორინოლარინგოლოგი</p>
+              </div>
+              <div class="flex gap-6 items-center">
+                <div>
+                  <img src="../assets/images/office-building-marker.svg" alt="office-building-icon">
+                </div>
+                <div class="flex flex-col gap-1 text-address text-7">
+                  <span>მედალფა - შპს აკადემიკოს ვახტანგ ბოჭორიშვილის კლინიკა</span>
+                  <span>16 ალექსანდრე ყაზბეგის გამზირი</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 hours-wrapper pb-4">
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full py-2 rounded-bl-6 rounded-br-6 flex border border-calBorder solid justify-center relative">
+        <div [ngClass]="true? '' : 'opacity-effect'" class="w-full absolute h-36"></div>
+        <div class="flex gap-6 items-center hover: cursor-pointer">
+          <p class="text-pinkCustom">ყველას ნახსვა</p>
+          <svg [ngClass]="true? 'rotate-90' : '-rotate-90'" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
+            viewBox="0 0 9 14">
+            <path id="chevron-right" d="M17.59,18.343,12.027,13,17.59,7.645,15.877,6,8.59,13l7.287,7Z"
+              transform="translate(-8.59 -6)" fill="#ed1c7c" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-[65%] mx-auto mb-40">
+      <div class="w-full rounded-tr-6 rounded-tl-6 border border-calBorder px-16 pt-12 relative">
+        <div [ngClass]="false ? 'max-h-max' : 'max-h-150'" class="overflow-hidden">
+          <div class="flex gap-12 pb-4 border-b border-calBorder border-dashed">
+            <div>
+              <img class="w-36 h-36 rounded-full" src="../assets/images/user-2.jpg" alt="User-2">
+            </div>
+            <div>
+              <div class="flex gap-8 text-7">
+                <p class="text-doctorName underline">ნინო ოქროპირძე</p>
+                <p class="text-pinkCustom">ოტორინოლარინგოლოგი</p>
+              </div>
+              <div class="flex gap-6 items-center">
+                <div>
+                  <img src="../assets/images/office-building-marker.svg" alt="office-building-icon">
+                </div>
+                <div class="flex flex-col gap-1 text-address text-7">
+                  <span>მედალფა - შპს აკადემიკოს ვახტანგ ბოჭორიშვილის კლინიკა</span>
+                  <span>16 ალექსანდრე ყაზბეგის გამზირი</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 hours-wrapper pb-4 border-b border-calBorder border-dashed mb-4">
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+          </div>
+          <div class="flex gap-12 pb-4 border-b border-calBorder border-dashed">
+            <div>
+              <img class="w-36 h-36 rounded-full" src="../assets/images/user-2.jpg" alt="User-2">
+            </div>
+            <div>
+              <div class="flex gap-8 text-7">
+                <p class="text-doctorName underline">ნინო ოქროპირძე</p>
+                <p class="text-pinkCustom">ოტორინოლარინგოლოგი</p>
+              </div>
+              <div class="flex gap-6 items-center">
+                <div>
+                  <img src="../assets/images/office-building-marker.svg" alt="office-building-icon">
+                </div>
+                <div class="flex flex-col gap-1 text-address text-7">
+                  <span>მედალფა - შპს აკადემიკოს ვახტანგ ბოჭორიშვილის კლინიკა</span>
+                  <span>16 ალექსანდრე ყაზბეგის გამზირი</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 hours-wrapper pb-4 border-b border-calBorder border-dashed mb-4">
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+          </div>
+          <div class="flex gap-12 pb-4 border-b border-calBorder border-dashed">
+            <div>
+              <img class="w-36 h-36 rounded-full" src="../assets/images/user-2.jpg" alt="User-2">
+            </div>
+            <div>
+              <div class="flex gap-8 text-7">
+                <p class="text-doctorName underline">ნინო ოქროპირძე</p>
+                <p class="text-pinkCustom">ოტორინოლარინგოლოგი</p>
+              </div>
+              <div class="flex gap-6 items-center">
+                <div>
+                  <img src="../assets/images/office-building-marker.svg" alt="office-building-icon">
+                </div>
+                <div class="flex flex-col gap-1 text-address text-7">
+                  <span>მედალფა - შპს აკადემიკოს ვახტანგ ბოჭორიშვილის კლინიკა</span>
+                  <span>16 ალექსანდრე ყაზბეგის გამზირი</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pt-4 hours-wrapper pb-4">
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+            <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full py-2 rounded-bl-6 rounded-br-6 flex border border-calBorder solid justify-center relative">
+        <div [ngClass]="false? '' : 'opacity-effect'" class="w-full absolute h-36"></div>
+        <div class="flex gap-6 items-center hover: cursor-pointer">
+          <p class="text-pinkCustom">ყველას ნახსვა</p>
+          <svg [ngClass]="false? 'rotate-90' : '-rotate-90'" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
+            viewBox="0 0 9 14">
+            <path id="chevron-right" d="M17.59,18.343,12.027,13,17.59,7.645,15.877,6,8.59,13l7.287,7Z"
+              transform="translate(-8.59 -6)" fill="#ed1c7c" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
