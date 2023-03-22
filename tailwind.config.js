@@ -28,7 +28,9 @@ module.exports = {
         calBorder: "#DEE0E8",
         doctorName: "#292562",
         address: "#9199B4",
-        timeBackgroundColor: '#F4F4FE'
+        timeBackgroundColor: '#F4F4FE',
+        white: '#FFFFFF'
+
       },
       fontSize: {
         7: '14px'

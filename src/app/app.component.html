@@ -1,5 +1,5 @@
 <div>
-  <!-- Header  -->
+  <!-- - Header -  -->
   <div class="w-full flex flex-row justify-between px-34 py-10 shadow-header sticky bg-white z-50 top-0">
     <img class="h-[80%] my-auto" src="../assets/images/logo.PNG" alt="logo of company" />
     <div class="h-[50%] my-auto group rounded-md flex items-center">
@@ -24,7 +24,7 @@
       </div>
     </div>
   </div>
-  <!-- Round Buttons -->
+  <!-- - Round Buttons - -->
   <div class="max-w-[65%] h-10 mx-auto my-12 flex flex-row justify-center">
     <div class="w-full flex items-center justify-around">
       <div *ngFor="
@@ -44,7 +44,7 @@
       </div>
     </div>
   </div>
-  <!-- Main Content Here -->
+  <!--  - Main Content -  -->
   <div class="mx-auto flex flex-col">
     <h1 class="text-textColor text-13 text-base mx-auto md:text-xl font-bold tracking-tight mb-16">
       ᲐᲘᲠᲩᲘᲔ ᲡᲐᲡᲣᲠᲕᲔᲚᲘ ᲓᲠᲝ
@@ -56,8 +56,8 @@
           <img src="../assets/images/calendar-cursor.svg" alt="Calendar">
           <span>დღეს - 23 ივლ</span>
         </button>
-        <!-- Calendar SLider -->
-        <div>
+        <!-- - Calendar SLider - -->
+        <div class="mr-23">
           <div id="carouselExampleControls" class="carousel slide max-w-max pt-8 pb-11" data-interval="false">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -159,11 +159,11 @@
 
               </div>
             </div>
-            <a class="carousel-control-prev w-23 h-23 border custom-arrow--left rounded-6"
+            <a class="carousel-control-prev w-23 h-23 border top-1/2 translate-x-[-150%] translate-y-[-50%] rounded-6"
               href="#carouselExampleControls" role="button" data-slide="prev">
               <img src="../assets/images/chevron-right.svg" alt="Arrow left">
             </a>
-            <a class="carousel-control-next w-23 h-23 border custom-arrow--right rounded-6"
+            <a class="carousel-control-next w-23 h-23 border top-1/2 translate-x-[150%] translate-y-[-50%] rounded-6"
               href="#carouselExampleControls" role="button" data-slide="next">
               <img class="rotate-180" src="../assets/images/chevron-right.svg" alt="Arrow rigth">
             </a>
@@ -204,7 +204,7 @@
               </div>
             </div>
           </div>
-          <div class="pt-4 hours-wrapper pb-4 border-b border-calBorder border-dashed mb-4">
+          <div class="pt-4 flex gap-6 flex-wrap pb-4 border-b border-calBorder border-dashed mb-4">
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
@@ -234,7 +234,7 @@
               </div>
             </div>
           </div>
-          <div class="pt-4 hours-wrapper pb-4 border-b border-calBorder border-dashed mb-4">
+          <div class="pt-4 flex gap-6 flex-wrap pb-4 border-b border-calBorder border-dashed mb-4">
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
@@ -264,7 +264,7 @@
               </div>
             </div>
           </div>
-          <div class="pt-4 hours-wrapper pb-4">
+          <div class="pt-4 flex gap-6 flex-wrap pb-4">
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
@@ -277,7 +277,8 @@
         </div>
       </div>
       <div class="w-full py-2 rounded-bl-6 rounded-br-6 flex border border-calBorder solid justify-center relative">
-        <div [ngClass]="true? '' : 'opacity-effect'" class="w-full absolute h-36"></div>
+        <div [ngClass]="true? '' : 'top-[-73px] bg-gradient-to-b from-transparent to-white'"
+          class="w-full absolute h-36"></div>
         <div class="flex gap-6 items-center hover: cursor-pointer">
           <p class="text-pinkCustom">ყველას ნახსვა</p>
           <svg [ngClass]="true? 'rotate-90' : '-rotate-90'" xmlns="http://www.w3.org/2000/svg" width="9" height="14"
@@ -312,7 +313,7 @@
               </div>
             </div>
           </div>
-          <div class="pt-4 hours-wrapper pb-4 border-b border-calBorder border-dashed mb-4">
+          <div class="pt-4 flex gap-6 flex-wrap pb-4 border-b border-calBorder border-dashed mb-4">
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
@@ -342,7 +343,7 @@
               </div>
             </div>
           </div>
-          <div class="pt-4 hours-wrapper pb-4 border-b border-calBorder border-dashed mb-4">
+          <div class="pt-4 flex gap-6 flex-wrap pb-4 border-b border-calBorder border-dashed mb-4">
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
@@ -372,7 +373,7 @@
               </div>
             </div>
           </div>
-          <div class="pt-4 hours-wrapper pb-4">
+          <div class="pt-4 flex gap-6 flex-wrap pb-4">
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
             <div class="bg-timeBackgroundColor rounded-4 max-w-max px-4 py-2">10:00 - 10:20</div>
@@ -385,7 +386,8 @@
         </div>
       </div>
       <div class="w-full py-2 rounded-bl-6 rounded-br-6 flex border border-calBorder solid justify-center relative">
-        <div [ngClass]="false? '' : 'opacity-effect'" class="w-full absolute h-36"></div>
+        <div [ngClass]="false? '' : 'top-[-73px] bg-gradient-to-b from-transparent to-white'"
+          class="w-full absolute h-36"></div>
         <div class="flex gap-6 items-center hover: cursor-pointer">
           <p class="text-pinkCustom">ყველას ნახსვა</p>
           <svg [ngClass]="false? 'rotate-90' : '-rotate-90'" xmlns="http://www.w3.org/2000/svg" width="9" height="14"

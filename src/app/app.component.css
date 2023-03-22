@@ -1,7 +1,0 @@
-input[type="radio"].checkRadio {
-  display: none;
-}
-input[type="radio"]:checked + .label {
-  background: rgb(237 28 124);
-  color: white;
-}
