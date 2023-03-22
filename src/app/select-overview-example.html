@@ -1,12 +1,11 @@
-<mat-form-field class="max-w-140" appearance="outline">
-    <mat-label>Favorite food</mat-label>
+<mat-form-field class="w-full" appearance="outline">
+    <mat-label class="text-deepPurple"><ng-content></ng-content></mat-label>
     <mat-select>
         <mat-option *ngFor="let food of foods" [value]="food.value">
             {{food.viewValue}}
         </mat-option>
     </mat-select>
 </mat-form-field>
-
 <!-- Copyright 2023 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that
     can be found in the LICENSE file at https://angular.io/license -->
